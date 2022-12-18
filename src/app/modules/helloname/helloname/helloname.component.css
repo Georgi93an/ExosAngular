@@ -1,0 +1,27 @@
+.hello{ 
+    padding: 2rem;
+    border: 1px solid black;
+    border-radius: .2rem;
+    margin-left: 25%;
+    margin-top: 2rem;
+    max-width: 45%;
+    width: 50%;
+    float: left;
+    background-color: bisque;
+}
+.footer{
+    padding: 2rem;
+    margin-left: 2rem;
+    }
+    
+    .align-left {
+    text-align: left;
+    }
+      
+    .align-center {
+    text-align: center;
+    }
+      
+    .align-right {
+    text-align: right;
+    }

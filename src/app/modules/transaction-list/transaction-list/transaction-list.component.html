@@ -1,0 +1,30 @@
+
+<div class="container transactions">
+   <div class="row">
+    <h2>List of Transtactions</h2>
+    <h2>{{currentTime |date: "medium"}}</h2>
+   </div>
+  <div class="row">
+    <table class="table table-bordered table-dark table-hover">
+    <thead>
+      <tr>
+        <th scope="col" (click)="sort('id')">ID</th>
+        <th scope="col" (click)="sort('amount')">AMOUNT</th>
+        <th scope="col" (click)="sort('balance')">BALANCE</th>
+        <th scope="col" (click)="sort('label')">LABEL</th>
+        <th scope="col" (click)="sort('date')">DATE</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let transaction of transactions" (click)="onTransactionClick(transaction)">
+        <td>{{ transaction.id }}</td>
+        <td>{{ transaction.amount }}</td>
+        <td>{{ transaction.balance }}</td>
+        <td>{{ transaction.label }}</td>
+        <td>{{ transaction.date }}</td>
+      </tr>
+    </tbody>
+  </table> 
+
+</div>   
+</div>  

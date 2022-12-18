@@ -1,0 +1,31 @@
+
+<div class="container transactions">
+    <div class="row">
+     <h2>Selected Transaction</h2>
+     <h2>{{currentTime |date: "medium"}}</h2>
+    </div>
+   <div class="row">
+   <table class="table table-bordered table-dark table-hover">
+     <thead>
+       <tr>
+         <th scope="col">ID</th>
+         <th scope="col">AMOUNT</th>
+         <th scope="col">BALANCE</th>
+         <th scope="col">LABEL</th>
+         <th scope="col">DESCRIPTION</th>
+         <th scope="col">DATE</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr>
+         <td>{{ selected.id }}</td>
+         <td>{{ selected.amount }}</td>
+         <td>{{ selected.balance }}</td>
+         <td>{{ selected.label }}</td>
+         <td>{{ selected.description }}</td>
+         <td>{{ selected.date }}</td>
+       </tr>
+     </tbody>
+   </table>
+ </div>   
+ </div>

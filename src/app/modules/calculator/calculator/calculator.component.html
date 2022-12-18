@@ -1,0 +1,51 @@
+<div class="container calculator">
+ 
+    <div class="row">
+        <h2>Calculator</h2>
+        <ul class="alloperations" *ngFor="let entry of history; let i = index">
+            <li >
+                {{entry.time | date:'short'}}
+            </li>
+            <li>
+                Last Operation: {{entry.operation}}
+            </li>
+            <li>
+                Result: {{entry.result}}
+            </li>
+            <li>
+                <button class="btn btn-danger btn-sm" (click)="clearHistory(i)">Delete Operation</button>
+            </li>
+        </ul>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+          <p>Last Operation Result: {{result}}</p>
+        </div>
+    </div>  
+      
+     <div class="row">
+        <div class="col-lg-4">
+          <label for="firstnum">First Number</label>
+          <input class="form-control" type="number" name="firstnum" [(ngModel)]="firstnum">
+        </div>
+        <div class="col-lg-4">
+          <label for="operators">Operator</label>
+          <select class="form-select" name="operators" [(ngModel)]="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+          </select>
+        </div>
+        <div class="col-lg-4">
+          <label for="secondnum">Second Number</label>
+          <input class="form-control" type="number" name="secondnum" [(ngModel)]="secondnum">
+        </div>
+     
+    <div class="row footer">
+        <div class="col-lg-12">
+          <input type="button" class="btn btn-success btn-lg" value="Calculate" (click)="calculate()">
+        </div>
+    </div>  
+  
+</div> 
